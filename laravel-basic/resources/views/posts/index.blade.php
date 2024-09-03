@@ -9,6 +9,14 @@
 
 <body>
   <h1>投稿一覧</h1>
-</body>
+  @foreach($posts as $post)
+  <div>
+    <h2>{{ $post->title }}</h2>
+    <p>{{ $post->content }}</p>
 
+  </div>
+  @endforeach
+</body>
+<td>{{ $product->id }}</td>
+      
 </html>

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
  // ルーティングを設定するコントローラを宣言する(post)
  use App\Http\Controllers\PostController;
+ use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +23,5 @@ Route::get('/', function () {
 });
 
 Route::get('/hello', [HelloController::class, 'index']);
-Route::get('/post', [PostController::class, 'index']);
-
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/products', [ProductController::class, 'index']);
