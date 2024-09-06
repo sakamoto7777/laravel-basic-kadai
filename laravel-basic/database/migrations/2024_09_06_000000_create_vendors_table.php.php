@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('vendors', function (Blueprint $table) {
             $table->id();
-            $table->integer('vendor_code')->unique();
+             $table->integer('vendor_code')->unique();
              $table->string('vendor_name');
             $table->timestamps();
         });
@@ -27,3 +27,4 @@ return new class extends Migration
         Schema::dropIfExists('vendors');
     }
 };
+
