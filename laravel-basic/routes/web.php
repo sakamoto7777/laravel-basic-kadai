@@ -6,6 +6,8 @@ use App\Http\Controllers\HelloController;
  // ルーティングを設定するコントローラを宣言する(post)
  use App\Http\Controllers\PostController;
  use App\Http\Controllers\ProductController;
+ use App\Http\Controllers\VendorController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +27,7 @@ Route::get('/', function () {
 Route::get('/hello', [HelloController::class, 'index']);
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/products', [ProductController::class, 'index']);
+Route::get('/products/{id}', [ProductController::class, 'show']);
+Route::get('/vendors/{id}', [VendorController::class, 'show']);
+
+

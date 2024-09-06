@@ -17,6 +17,6 @@
   </div>
   @endforeach
 </body>
-<td>{{ $product->id }}</td>
-      
+<td>{{ $post->id }}</td>
+
 </html>
