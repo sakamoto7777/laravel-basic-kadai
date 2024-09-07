@@ -86,15 +86,9 @@ class PostController extends Controller
 
   public function store(PostStoreRequest  $request)
 {
-    
-  if ($errors = $request->session()->get('errors')) {
-    return redirect()->back()->withErrors($errors)->withInput();
-}
-    // バリデーションを設定する
-    $request->validate([
-        'title' => 'required|max:20', // タイトルの最大文字数を20に設定
-        'content' => 'required|max:200' // 本文の最大文字数を200に設定
-    ]);
+ 
+   
+   
 
     // フォームの入力内容をもとに、テーブルにデータを追加する
     $post = new Post();
